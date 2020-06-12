@@ -10,9 +10,9 @@ app = Flask(__name__)
 setup_metrics(app)
 
 @app.route('/')
-def hello():
+def testing():
   logging.info("This endpoint has been hit!")
-  return "Hello Miaw!"
+  return "Si corre en mi maquina pinche container.jpg!"
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
