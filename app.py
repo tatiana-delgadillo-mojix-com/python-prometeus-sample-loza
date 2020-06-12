@@ -1,9 +1,7 @@
 import sys
 import logging
 from flask import Flask
-from prometheus_flask_exporter import PrometheusMetrics
-from healthcheck import HealthCheck, EnvironmentDump
-import pandas as pd
+
 
 
 LOG_FILENAME = 'aplication.log'
@@ -30,8 +28,6 @@ app.add_url_rule("/healthcheck", "healthcheck", view_func=lambda: health.run())
          labels={'endpoint': "Load_df"})
 def Load_df():
   try:
-    d = {'col1': [1, 2], 'col2': [3, 4]}
-    df = pd.DataFrame(data=d)
     logging.info("Dataframe successfuly loaded!")
     return "Working..."
   except ValueError:
