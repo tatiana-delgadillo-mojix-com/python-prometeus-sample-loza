@@ -1,2 +1,3 @@
 prometheus-flask-exporter
 py-healthcheck
+pandas
