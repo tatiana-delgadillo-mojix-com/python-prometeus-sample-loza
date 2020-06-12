@@ -12,7 +12,7 @@ setup_metrics(app)
 @app.route('/')
 def hello():
   logging.info("This endpoint has been hit!")
-  return "Hello Rodrigo!"
+  return "Hello Miaw!"
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
